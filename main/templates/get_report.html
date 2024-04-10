@@ -1,0 +1,22 @@
+<div>
+  <h1>Get Report</h1>
+  
+  {% if status == 404 %}
+  <h2>Error: {{message}}</h2>
+  {% else %}
+  <h2>Status: {{message}}</h2>
+  <h3>Report URL: {{report_url}}</h3>
+  
+  <table border="2px">
+      {% for row in rows %}
+      <tr>
+        {% for column in row %}
+        <th>{{column}}</th>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+      
+    </table>
+  {% endif %}
+</div>
+

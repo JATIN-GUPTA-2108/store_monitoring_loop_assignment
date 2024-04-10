@@ -1,0 +1,10 @@
+<div>
+    <h1>Trigger Report</h1>
+    
+    {% if status == 200 %}
+    <h2>Congratulations!! The report is ready.</h2>
+    <h3>The report id is: {{report_id}}.</h3>
+    {% else %}
+    <h2>Error: {{message}}</h2>
+    {% endif %}
+</div>
